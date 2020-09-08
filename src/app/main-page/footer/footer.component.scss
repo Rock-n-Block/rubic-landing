@@ -77,8 +77,16 @@
 .copyright {
   text-align: center;
   font-size: 15px;
-  color: rgba(0, 0, 0, 0.5);
+  color: #a8a8a8;
   padding: 30px 0;
+
+  a {
+    color: #a8a8a8;
+
+    &:hover {
+      color: var(--main-green) !important;
+    }
+  }
 }
 
 @media screen and (max-width: 720px) {
