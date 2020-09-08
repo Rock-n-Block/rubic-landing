@@ -1,33 +1,4 @@
-<app-header *ngIf="withHeader"></app-header>
+<app-header-main-page *ngIf="withHeader"></app-header-main-page>
 <router-outlet></router-outlet>
-
-<!-- div class="watch-instruction-btn hide-sm"
-
-     [ngClass]="{'hide-1024': hideInstructionLink}" *ngIf="visibleWatchButton">
-  <a href="https://www.youtube.com/watch?v=NVd2A0a_dn0"
-     target="_blank"
-     class="btn btn-white-opacity">
-    <img class="arrow" src="./assets/images/buttons/arrow_y.svg">
-    <span>Watch instruction</span>
-  </a>
-</div>
-
-
-<div class="cookies-info" *ngIf="notCookiesAccept">
-  <div class="cookies-info_content">
-    <div class="cookies-info_content_text">
-      We use cookies to enhance your experience.
-      <br>
-      By using <span>SWAPS.NETWORK</span> you agree to our cookies terms.
-    </div>
-    <div class="cookies-info_content_button">
-      <button class="btn btn-white-opacity" (click)="closeCookiesInfo()">
-        <span>Accept</span>
-      </button>
-    </div>
-  </div>
-
-  <span class="cookies-info_content_close" (click)="closeCookiesInfo(true)"></span>
-</div -->
-
-
+<app-footer-main-page *ngIf="withFooter"></app-footer-main-page>
+<div class="scroll-top-btn" id="scroll-btn"></div>
