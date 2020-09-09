@@ -72,6 +72,10 @@ a {
     font-size: 7vw;
     text-align: center;
     margin: 10px 0;
+
+    @include b(500) {
+      font-size: 10vw;
+    }
   }
 }
 
@@ -88,6 +92,11 @@ a {
       font-weight: normal;
       font-size: 18px;
       line-height: 28px;
+
+      @include b(800) {
+        font-size: 16px;
+        line-height: 1.5;
+      }
     }
   }
 }
@@ -99,6 +108,12 @@ a {
       font-weight: 500;
       font-size: 27px;
       line-height: 27px;
+
+      @include b(800) {
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 1.3;
+      }
     }
   }
 
@@ -108,16 +123,10 @@ a {
       font-weight: normal;
       font-size: 50px;
       line-height: 50px;
-    }
-  }
-}
-.p {
-  &-info {
-    &-text {
-      font-style: normal;
-      font-weight: normal;
-      font-size: 18px;
-      line-height: 28px;
+
+      @include b(500) {
+        font-size: 35px;
+      }
     }
   }
 }
