@@ -1,5 +1,5 @@
 {
-  "name": "mywish-rubic-landing",
+  "name": "rubic-landing",
   "version": "1.0.0",
   "scripts": {
     "start": "ng serve --proxy-config proxy.conf.json --host local.landingrubic.mywish.io --port 4224 --disableHostCheck",
