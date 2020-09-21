@@ -37,10 +37,14 @@
 
     &-buttons {
       display: flex;
-      justify-content: center;
       align-items: center;
       margin: 0 -10px;
       margin-top: 50px;
+      max-width: 400px;
+      width: 100%;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
 
       @include b(500) {
         flex-direction: column;
@@ -48,10 +52,10 @@
       }
 
       * {
-        margin: 5px 10px;
+        margin: 5px;
 
         @include b(500) {
-          margin: 10px 10px;
+          margin: 5px;
           max-width: 100%;
           width: 100%;
         }
