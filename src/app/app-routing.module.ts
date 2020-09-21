@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 // ***** pages *****
 import { MainPageComponent } from './main-page/main-page.component';
+import { TokenSaleComponent } from './token-sale/token-sale.component';
 
 const routes: Routes = [
   {
@@ -12,6 +13,14 @@ const routes: Routes = [
       noheader: false,
       nofalse: false,
     },
+  },
+  {
+    path: 'token-sale',
+    redirectTo: '',
+  },
+  {
+    path: 'token-sale-1600783200000',
+    component: TokenSaleComponent,
   },
 ];
 

@@ -67,3 +67,172 @@
     }
   }
 }
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 96%;
+  height: 50px;
+  padding: 0 15px;
+  border: none;
+  border-left: 5px solid;
+  outline: none;
+  // font-family: 'Poppins', sans-serif;
+  font-family: inherit;
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  transition: all linear 0.1s;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: relative;
+
+  &__auto-width {
+    width: auto;
+  }
+  &-auto {
+    display: inline-block;
+    width: auto;
+  }
+
+  &:not(&-normal-weight) {
+    font-weight: bold;
+  }
+  &:disabled {
+    opacity: 0.6;
+    cursor: default;
+  }
+  .spiner {
+    width: 20px;
+  }
+  .arrow {
+    margin-right: 10px;
+  }
+  &_small {
+    width: 250px;
+  }
+  &_subscribe {
+    width: 200px;
+    height: 50px;
+  }
+  &-min-padding {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  &-min {
+    font-size: 16px;
+    height: 42px;
+    svg {
+      vertical-align: middle;
+      width: 21px;
+      height: 21px;
+      margin-right: 10px;
+      margin-left: -6px;
+    }
+  }
+  &-for-field {
+    height: 40px;
+    margin: 5px 0;
+  }
+  &-transparent {
+    color: #000;
+    &:not(.with-bg) {
+      background-color: transparent;
+    }
+    &.with-bg {
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+    border: 1px solid #b9bdc2;
+    border-left-width: 5px;
+    &:not([disabled]):hover {
+      border-color: #dbe0e6;
+    }
+    .just-title {
+      display: block;
+      margin: -1px 0;
+    }
+  }
+  &-link {
+    background-color: transparent;
+    border: 0 none;
+    padding: 0;
+    font-weight: normal;
+    &:hover,
+    &:focus {
+      color: #fcd600;
+      text-decoration: underline;
+    }
+  }
+  &-white-opacity {
+    border-color: #2873fb;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    &.white-border {
+      border-color: rgba(255, 255, 255, 0.67);
+    }
+    &:hover {
+      background-color: rgba(255, 255, 255, 1);
+    }
+  }
+  &-yellow {
+    background: #fcd600;
+    border-left-color: rgba(255, 255, 255, 0.67);
+    color: #000;
+    &:not([disabled]):hover {
+      background-color: #ffff00;
+    }
+    &:not([disabled]):active {
+      background-color: #c7a800;
+    }
+  }
+  &-blue {
+    background: #2873fb;
+    border-left-color: rgba(255, 255, 255, 0.67);
+    color: white;
+    &:not([disabled]):hover {
+      background-color: #2872fbcc;
+    }
+    &:not([disabled]):active {
+      background-color: #2873fb;
+    }
+  }
+  &-green {
+    background: #4aa956;
+    border-left-color: rgba(255, 255, 255, 0.67);
+    color: white;
+    &:not([disabled]):hover {
+      background-color: #4aa956;
+    }
+    &:not([disabled]):active {
+      background-color: #4aa956;
+    }
+  }
+  &-payment {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    border-radius: 2px;
+    border-width: 0;
+    font-weight: normal;
+    font-size: 16px;
+    padding: 0 15px;
+    margin-bottom: 7px;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+    &_ico {
+      vertical-align: middle;
+      height: 26px;
+      margin-right: 8px;
+    }
+    &_txt {
+      vertical-align: middle;
+    }
+  }
+  &-ico {
+    height: 28px;
+    margin-right: 5px;
+    vertical-align: middle;
+    margin-left: 5px;
+  }
+}
