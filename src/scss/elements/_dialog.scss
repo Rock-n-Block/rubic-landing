@@ -130,6 +130,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 
   @include b(500) {
     min-height: 200px;
@@ -146,6 +147,32 @@
 
       @include b(500) {
         grid-gap: 10px;
+      }
+
+      &-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background-color: #00000085;
+        color: white;
+        width: 25px;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 1;
+        border-radius: 30px;
+        font-size: 13px;
+        opacity: 0.5;
+        transition: 0.4s ease;
+        border: none;
+        outline: none;
+        cursor: pointer;
+
+        &:hover {
+          transition: 0.4s ease;
+          opacity: 1;
+        }
       }
 
       &-title {
