@@ -118,6 +118,65 @@
   }
 }
 
+.dialog-block-listing {
+  background: #4aa956;
+  background-image: url(assets/images/props/modal-listing-left-top.svg),
+    url(assets/images/props/modal-listing-right-top.svg),
+    url(assets/images/props/modal-listing-right-bottom.svg);
+  background-repeat: no-repeat;
+  background-position: left top, right top, right bottom;
+  background-size: 160px, 90px, 200px;
+  min-height: 310px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include b(500) {
+    min-height: 200px;
+    background-size: 100px, 60px, 150px;
+  }
+
+  .dialog-block {
+    &__content {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 20px;
+      text-align: center;
+      color: white;
+
+      @include b(500) {
+        grid-gap: 10px;
+      }
+
+      &-title {
+        font-weight: bold;
+        font-size: 35px;
+
+        @include b(500) {
+          font-size: 24px;
+        }
+      }
+
+      &-text {
+        font-size: 23px;
+
+        @include b(500) {
+          font-size: 13px;
+        }
+      }
+
+      .rubic-btn {
+        max-width: 185px;
+        margin: 10px auto 0 auto;
+
+        @include b(500) {
+          min-height: 40px;
+        }
+      }
+    }
+  }
+}
+
 .dialog-ts-container {
   .dialog-block {
     &__content {

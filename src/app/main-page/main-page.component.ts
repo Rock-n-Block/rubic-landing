@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import { MatDialog, MatDialogRef } from '@angular/material';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -7,9 +8,20 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./main-page.component.scss'],
 })
 export class MainPageComponent implements OnInit {
-  constructor(protected route: ActivatedRoute) {}
+  @ViewChild('listingModal') listing: TemplateRef<any>;
+
+  protected listingModal: MatDialogRef<any>;
+
+  constructor(protected route: ActivatedRoute, private dialog: MatDialog) {}
 
   ngOnInit() {
-    new window['ScrollTopButton'](500);
+    this.openModal();
+  }
+
+  public openModal() {
+    this.listingModal = this.dialog.open(this.listing, {
+      width: '500px',
+      panelClass: 'dialog-listing-container',
+    });
   }
 }
