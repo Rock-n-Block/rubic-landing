@@ -8,7 +8,7 @@
 
   background-image: url(../../assets/images/props/cubes-lines.svg);
   background-repeat: no-repeat;
-  background-position: right 11%;
+  background-position: right 4%;
   padding-bottom: 50px;
   background-size: 16%;
 
@@ -92,8 +92,71 @@
     }
   }
 
+  .listing {
+    margin-top: 50px;
+    background-color: #4aa956;
+    padding: 30px 10px;
+    background-image: url(../../assets/images/props/listing-left.svg),
+      url(../../assets/images/props/listing-right.svg);
+    background-position: top left, top right;
+    background-size: contain, contain;
+    background-repeat: no-repeat;
+
+    @include b(1000) {
+      background-position: -40% 0, 170% 0;
+    }
+
+    @include b(800) {
+      background-position: -80% 0, 260% 0;
+    }
+
+    @include b(700) {
+      background-image: url(../../assets/images/props/listing-left.svg);
+    }
+
+    @include b(600) {
+      background-image: none;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 20px;
+      text-align: center;
+      color: #ffffff;
+      font-style: normal;
+      font-weight: normal;
+    }
+
+    &-title {
+      font-weight: bold;
+      font-size: 37px;
+
+      @include b(500) {
+        font-size: 27px;
+      }
+    }
+
+    &-text {
+      font-size: 24px;
+
+      @include b(500) {
+        font-size: 15px;
+      }
+    }
+
+    .rubic-btn {
+      max-width: 185px;
+      margin: 0 auto;
+
+      @include b(500) {
+        min-height: 40px;
+      }
+    }
+  }
+
   .rubic-info {
-    margin-top: 130px;
+    margin-top: 50px;
 
     @include b(850) {
       margin-top: 50px;
