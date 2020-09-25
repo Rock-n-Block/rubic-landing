@@ -15,7 +15,7 @@ export class MainPageComponent implements OnInit {
   constructor(protected route: ActivatedRoute, private dialog: MatDialog) {}
 
   ngOnInit() {
-    this.openModal();
+    // this.openModal();
   }
 
   public openModal() {
