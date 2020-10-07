@@ -8,7 +8,7 @@
 
   background-image: url(../../assets/images/props/cubes-lines.svg);
   background-repeat: no-repeat;
-  background-position: right 11%;
+  background-position: right 4%;
   padding-bottom: 50px;
   background-size: 16%;
 
@@ -37,10 +37,14 @@
 
     &-buttons {
       display: flex;
-      justify-content: center;
       align-items: center;
       margin: 0 -10px;
       margin-top: 50px;
+      max-width: 400px;
+      width: 100%;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
 
       @include b(500) {
         flex-direction: column;
@@ -48,10 +52,10 @@
       }
 
       * {
-        margin: 5px 10px;
+        margin: 5px;
 
         @include b(500) {
-          margin: 10px 10px;
+          margin: 5px;
           max-width: 100%;
           width: 100%;
         }
@@ -68,23 +72,91 @@
 
     .container {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
       max-width: 850px;
       flex-wrap: wrap;
 
       @include b(500) {
         flex-direction: column;
+        flex-wrap: nowrap;
       }
 
       img {
-        margin: 30px 10px;
+        margin: 30px 5%;
+
+        @include b(650) {
+          margin: 30px;
+        }
+      }
+    }
+  }
+
+  .listing {
+    margin-top: 50px;
+    background-color: #4aa956;
+    padding: 30px 10px;
+    background-image: url(../../assets/images/props/listing-left.svg),
+      url(../../assets/images/props/listing-right.svg);
+    background-position: top left, top right;
+    background-size: contain, contain;
+    background-repeat: no-repeat;
+
+    @include b(1000) {
+      background-position: -40% 0, 170% 0;
+    }
+
+    @include b(800) {
+      background-position: -80% 0, 260% 0;
+    }
+
+    @include b(700) {
+      background-image: url(../../assets/images/props/listing-left.svg);
+    }
+
+    @include b(600) {
+      background-image: none;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 20px;
+      text-align: center;
+      color: #ffffff;
+      font-style: normal;
+      font-weight: normal;
+    }
+
+    &-title {
+      font-weight: bold;
+      font-size: 37px;
+
+      @include b(500) {
+        font-size: 27px;
+      }
+    }
+
+    &-text {
+      font-size: 24px;
+
+      @include b(500) {
+        font-size: 15px;
+      }
+    }
+
+    .rubic-btn {
+      max-width: 185px;
+      margin: 0 auto;
+
+      @include b(500) {
+        min-height: 40px;
       }
     }
   }
 
   .rubic-info {
-    margin-top: 130px;
+    margin-top: 50px;
 
     @include b(850) {
       margin-top: 50px;
@@ -98,15 +170,18 @@
       padding: 10px 20px;
 
       @include b(850) {
+        grid-gap: 30px;
+      }
+
+      @include b(850) {
         grid-template-columns: 1fr;
-        grid-gap: 50px;
       }
     }
 
     &-img {
       padding-top: 30px;
 
-      @include b(850) {
+      @include b(750) {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -131,12 +206,24 @@
       .rubic-btn {
         margin-top: 30px;
         max-width: 185px;
+
+        @include b(850) {
+          max-width: 100%;
+        }
       }
     }
   }
 
   .who-we-are {
     margin-top: 130px;
+    background-image: url(../../assets/images/props/cube-lines-2.svg);
+    background-repeat: no-repeat;
+    background-position: -120px 210px;
+    background-size: 25%;
+
+    @include b(1210) {
+      background-image: none;
+    }
 
     @include b(850) {
       margin-top: 50px;
@@ -153,6 +240,11 @@
       .p-info-text {
         font-size: 20px;
         line-height: 2;
+
+        @include b(800) {
+          font-size: 18px;
+          line-height: 1.7;
+        }
       }
 
       .block-logo {
@@ -165,8 +257,19 @@
         flex-wrap: wrap;
         max-width: 900px;
 
+        @include b(800) {
+          margin: 30px 0;
+        }
+
+        @include b(750) {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-gap: 50px;
+          width: max-content;
+        }
+
         @include b(500) {
-          flex-direction: column;
+          grid-template-columns: 1fr;
         }
 
         img {
@@ -178,12 +281,8 @@
   }
 
   .build-with-rubic {
-    margin-top: 130px;
-    background-image: url(../../assets/images/props/cube-lines-2.svg);
-    background-repeat: no-repeat;
-    background-position: 0 200px;
-    padding-bottom: 150px;
-    background-size: 22%;
+    margin-top: 80px;
+    padding-bottom: 20px;
 
     @include b(1100) {
       background-image: none;
@@ -199,33 +298,33 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      max-width: 450px;
     }
 
     .blocks-info {
       display: grid;
-      grid-template-columns: repeat(3, 120px);
-      grid-gap: 5px;
+      grid-template-columns: repeat(2, minmax(200px, 337px));
+      grid-gap: 15px;
+      width: 100%;
+      justify-content: center;
 
-      @include b(400) {
-        grid-template-columns: repeat(3, 100px);
+      @include b(500) {
+        grid-template-columns: 1fr;
       }
 
       &-item {
-        border: 1px solid #dddddd;
-        border-radius: 12px;
-        background-color: #fff;
+        border-radius: 8px;
         overflow: hidden;
-        padding: 20px 15px;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        min-height: 78px;
+        min-height: 100px;
+        overflow: hidden;
+        position: relative;
+        overflow: hidden;
 
         @include b(400) {
           padding: 10px 5px;
-          min-height: 68px;
         }
 
         a {
@@ -234,8 +333,19 @@
           cursor: pointer;
           text-decoration: none;
           margin: 0;
-          padding: 0;
+          padding: 20px 15px;
           color: var(--main-green);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          background-color: #4aa956;
+          transition: 0.4s ease;
+
+          &:hover {
+            opacity: 0.7;
+            transition: 0.4s ease;
+          }
 
           * {
             cursor: pointer;
@@ -244,51 +354,72 @@
 
         &-title {
           font-weight: bold;
-          font-size: 16.9857px;
-          line-height: 17px;
-          margin-bottom: 10px;
-          word-wrap: break-word;
-          height: 30px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+          font-size: 24px;
+          line-height: 24px;
+          margin-bottom: 12px;
+          color: #ffffff;
         }
 
         &-text {
           font-weight: bold;
-          font-size: 8.49284px;
-          line-height: 8px;
-          margin-bottom: 5px;
-          margin-top: 10px;
-          word-wrap: break-word;
+          font-size: 10px;
+          line-height: 10px;
+          margin-top: 3px;
+          letter-spacing: 0.1em;
           text-transform: uppercase;
+          color: rgba(255, 255, 255, 0.5);
+          margin-bottom: 5px;
         }
 
         &-img {
-          max-width: 70px;
+          margin-top: 5px;
+          max-width: 100px;
         }
 
         &-btn {
-          border-radius: 20px;
-          font-size: 8px;
-          background-color: var(--main-green);
-          color: white;
+          background: rgba(255, 255, 255, 0.25);
+          border-radius: 33px;
+          font-size: 12px;
+          line-height: 12px;
+          text-align: center;
+          color: #ffffff;
           margin-bottom: 5px;
           width: 100%;
+          max-width: 100px;
           padding: 5px;
+          margin-bottom: 3px;
+        }
+
+        &-soon {
+          background-color: #4aa956;
+          width: 100%;
+          min-height: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          position: absolute;
         }
 
         &-coming {
-          font-size: 16.9857px;
-          color: #4aa956;
+          font-weight: bold;
+          font-size: 24px;
+          line-height: 24px;
+          color: #ffffff;
           opacity: 0.5;
+          margin-top: 3px;
         }
       }
     }
   }
 
   .mission {
-    margin-top: 50px;
+    margin-top: 150px;
+
+    @include b(850) {
+      margin-top: 50px;
+    }
 
     @include b(850) {
       margin-top: 50px;
