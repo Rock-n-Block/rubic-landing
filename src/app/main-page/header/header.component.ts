@@ -82,7 +82,7 @@ export class HeaderMainPageComponent implements OnInit {
       })[0].active = false;
     }
     this.currLanguage = event.lang;
-    this.cookieService.set("lng", this.currLanguage);
+    this.cookieService.set("lng", this.currLanguage, null, null, null, null, null);
 
     this.languagesList.filter((lang) => {
       return lang["lng"] === this.currLanguage;

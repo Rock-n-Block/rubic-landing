@@ -56,11 +56,11 @@ export function exportTranslateStaticLoader(http: HttpClient, transferState: Tra
 
 
 
-export function appInitializerFactory(translate: TranslateService) {
+export function appInitializerFactory(translate: TranslateService, cookieService: CookieService) {
 
   const defaultLng = (navigator.language || navigator['browserLanguage']).split('-')[0];
 
-  const langToSet = window['jQuery']['cookie']('lng') || ((['en', 'ko'].indexOf(defaultLng) > -1) ? defaultLng : 'en');
+  const langToSet = cookieService.get('lng') || ((['en', 'ko'].indexOf(defaultLng) > -1) ? defaultLng : 'en');
 
   return () => new Promise<any>((resolve: any, reject) => {
 
@@ -105,7 +105,7 @@ export function appInitializerFactory(translate: TranslateService) {
     {
       provide: APP_INITIALIZER,
       useFactory: appInitializerFactory,
-      deps: [TranslateService],
+      deps: [TranslateService, CookieService],
       multi: true,
     },
     CookieService
