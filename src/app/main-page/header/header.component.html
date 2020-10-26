@@ -32,7 +32,7 @@
             <span
               class="header-link"
               (click)="productMenuOpened = !productMenuOpened"
-              >Products</span
+              >{{'Products' | translate}}</span
             >
             <ul class="header-menu_sublist">
               <li class="header-menu_sublist_item">
@@ -40,7 +40,7 @@
                   class="sublist-link"
                   href="https://rubic.exchange/"
                   target="_blank"
-                  >Trade platform</a
+                  >{{'Trade platform' | translate}}</a
                 >
               </li>
               <li class="header-menu_sublist_item">
@@ -48,7 +48,7 @@
                   class="sublist-link"
                   href="https://contracts.mywish.io"
                   target="_blank"
-                  >Create token</a
+                  >{{'Create token' | translate}}</a
                 >
               </li>
               <li class="header-menu_sublist_item">
@@ -56,50 +56,35 @@
                   class="sublist-link"
                   href="https://contracts.mywish.io"
                   target="_blank"
-                  >Airdrop</a
+                  >{{'Airdrop' | translate}}</a
                 >
               </li>
             </ul>
           </li>
-          <!-- <li
-            class="header-menu_list_item with-sublist"
-            [ngClass]="{ 'opened-list': devMenuOpened }"
-          >
-            <span class="header-link" (click)="devMenuOpened = !devMenuOpened"
-              >Developers</span
-            >
-            <ul class="header-menu_sublist">
-              <li class="header-menu_sublist_item">
-                <a class="sublist-link">One</a>
-              </li>
-              <li class="header-menu_sublist_item">
-                <span class="sublist-link">Two</span>
+
+
+
+          <li class="language-select">
+            <ul class="language-select-list"
+                [ngClass]="{'opened': openedLngList}" (click)="toggleLanguage()">
+              <li (click)="setLanguage(lng['lng'])"
+                  [ngClass]="{'active': lng['active']}"
+                  *ngFor="let lng of languagesList">
+                <img src="/assets/images/lng/{{lng['lng']}}.svg"/>
+                <span>{{lng['title']}}</span>
               </li>
             </ul>
-          </li> -->
-          <!-- <li
-            class="header-menu_list_item with-sublist"
-            [ngClass]="{ 'opened-list': infoMenuOpened }"
-          >
-            <span class="header-link" (click)="infoMenuOpened = !infoMenuOpened"
-              >Info</span
-            >
-            <ul class="header-menu_sublist">
-              <li class="header-menu_sublist_item">
-                <a class="sublist-link">Info 1</a>
-              </li>
-              <li class="header-menu_sublist_item">
-                <span class="sublist-link">Info 2</span>
-              </li>
-            </ul>
-          </li> -->
+          </li>
+
+
+
           <li class="header-menu_list_item">
             <a
               class="rubic-btn rubic-btn-green"
               href="https://rubic.exchange/"
               target="_blank"
               style="font-size: 14px"
-              >Launch platform</a
+              >{{'Launch platform' | translate}}</a
             >
           </li>
         </ul>

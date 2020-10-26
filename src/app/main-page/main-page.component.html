@@ -2,22 +2,19 @@
 <div class="main-page">
   <section class="first-section">
     <div class="container">
-      <h1 class="h1-title">
-        Multichain DeFi <br />
-        platform
-      </h1>
+      <h1 class="h1-title" [innerHTML]="'Multichain DeFi <br />platform' | translate"></h1>
       <div class="first-section-buttons">
         <a
           class="rubic-btn rubic-btn-green"
           href="https://rubic.exchange/"
           target="_blank"
-          >Launch platform
+          [translate]="'Launch platform'">
         </a>
         <a
-          href="https://drive.google.com/file/d/1Ab3DmoM02689MJoItdXlywvTvdtihp5_/view?usp=sharing"
+          [href]="onePagerLinks[lng]"
           target="_blank"
           class="rubic-btn rubic-btn-green rubic-btn-border"
-          >Read One Pager
+          [translate]="'Read One Pager'">
         </a>
       </div>
     </div>
@@ -41,23 +38,19 @@
       </div>
       <div class="rubic-info-text cl-green">
         <h3 class="h3-info-text">
-          Rubic organizes defi services to enable a project to create, manage
-          and trade tokens decentralized in ONE PLACE.
+          {{'Rubic organizes defi services to enable a project to create, manage and trade tokens decentralized in ONE PLACE.' | translate}}
         </h3>
         <p class="p-info-text">
-          We already provide multichain services for creating and managing
-          tokens (airdrop, crowdsale, pools) powered by MyWish.
+          {{'We already provide multichain services for creating and managing tokens (airdrop, crowdsale, pools) powered by MyWish.' | translate}}
           <br />
           <br />
-          Rubic's goal is to add multichain p2p trades to existing services and
-          develop other products such as liquidity pools. And make it simple and
-          user friendly.
+          {{'Rubic\'s goal is to add multichain p2p trades to existing services and develop other products such as liquidity pools. And make it simple and user friendly.' | translate }}
         </p>
         <a
           href="https://drive.google.com/file/d/1KoEsdea4uDMUp2ypVblEVBwyLNFHHW9A/view?usp=sharing"
           target="_blank"
           class="rubic-btn rubic-btn-green rubic-btn-border"
-          >Read White Paper</a
+          >{{'Read White Paper' | translate}}</a
         >
       </div>
     </div>
@@ -65,12 +58,11 @@
 
   <section class="who-we-are cl-green">
     <div class="container">
-      <h3 class="h3-block-title">Who we are</h3>
+      <h3 class="h3-block-title">{{'Who we are' | translate }}</h3>
       <p class="p-info-text">
-        <b>Our team released several crypto projects such as:</b>
+        <b>{{'Our team released several crypto projects such as:' | translate }}</b>
         <br />
-        MyWish platform — the leading platform for Smart contracts builders for
-        6 blockchains (NEO, Ethereum, TRON, EOS, RSK, and WAVES) supported by
+        {{'MyWish platform — the leading platform for Smart contracts builders for 6 blockchains (NEO, Ethereum, TRON, EOS, RSK, and WAVES) supported by' | translate }}
       </p>
       <div class="block-logo">
         <span class="span-icon-svg">
@@ -81,7 +73,7 @@
             class="span-icon-svg-link"
           ></a>
           <object type="image/svg+xml" data="assets/images/logos/tron-gray.svg">
-            tron
+            {{ 'tron' | translate }}
           </object>
         </span>
         <span class="span-icon-svg">
@@ -95,7 +87,7 @@
             type="image/svg+xml"
             data="assets/images/logos/binance-gray.svg"
           >
-            binance
+            {{'binance' | translate}}
           </object>
         </span>
         <span class="span-icon-svg">
@@ -106,7 +98,7 @@
             class="span-icon-svg-link"
           ></a>
           <object type="image/svg+xml" data="assets/images/logos/neo-gray.svg">
-            neo
+            {{'neo' | translate}}
           </object>
         </span>
         <span class="span-icon-svg">
@@ -117,13 +109,12 @@
             class="span-icon-svg-link"
           ></a>
           <object type="image/svg+xml" data="assets/images/logos/okex-gray.svg">
-            okex
+            {{ 'okex' | translate }}
           </object>
         </span>
       </div>
       <p class="p-info-text">
-        Rock and block company which successfully delivered products for NEO,
-        Quras, Ducatus, Waves, Enecuum, Axion.network and many others
+        {{'Rock and block company which successfully delivered products for NEO, Quras, Ducatus, Waves, Enecuum, Axion.network and many others' | translate}}
       </p>
       <div class="block-logo">
         <span class="span-icon-svg">
@@ -137,7 +128,7 @@
             type="image/svg+xml"
             data="assets/images/logos/quras-gray.svg"
           >
-            quras
+            {{'quras' | translate}}
           </object>
         </span>
         <span class="span-icon-svg">
@@ -151,7 +142,7 @@
             type="image/svg+xml"
             data="assets/images/logos/ducatus-gray.svg"
           >
-            ducatus
+            {{'ducatus' | translate}}
           </object>
         </span>
         <span class="span-icon-svg">
@@ -165,7 +156,7 @@
             type="image/svg+xml"
             data="assets/images/logos/waves-gray.svg"
           >
-            waves
+            {{'waves'|translate}}
           </object>
         </span>
         <span class="span-icon-svg">
@@ -178,7 +169,7 @@
             type="image/svg+xml"
             data="assets/images/logos/axion-gray.svg"
           >
-            axion
+            {{'axion' | translate}}
           </object>
         </span>
       </div>
@@ -187,12 +178,12 @@
 
   <section class="build-with-rubic cl-green">
     <div class="container">
-      <h3 class="h3-block-title">Build with Rubic</h3>
+      <h3 class="h3-block-title">{{'Build with Rubic' | translate}}</h3>
       <div class="blocks-info">
         <div class="blocks-info-item">
           <a href="https://rubic.exchange/" target="_blank">
-            <span class="blocks-info-item-title">Trade Platform</span>
-            <span class="blocks-info-item-text">powered by</span>
+            <span class="blocks-info-item-title">{{'Trade Platform' | translate}}</span>
+            <span class="blocks-info-item-text">{{'powered by' | translate}}</span>
             <img
               class="blocks-info-item-img"
               src="assets/images/logos/rubic-white.svg"
@@ -202,8 +193,8 @@
         </div>
         <div class="blocks-info-item">
           <a href="https://contracts.mywish.io" target="_blank">
-            <span class="blocks-info-item-title">Create token</span>
-            <span class="blocks-info-item-text">powered by</span>
+            <span class="blocks-info-item-title">{{'Create token' | translate}}</span>
+            <span class="blocks-info-item-text">{{'powered by' | translate}}</span>
             <img
               class="blocks-info-item-img"
               src="assets/images/logos/mywish-green.svg"
@@ -213,8 +204,8 @@
         </div>
         <div class="blocks-info-item">
           <a href="https://contracts.mywish.io" target="_blank">
-            <span class="blocks-info-item-title">Airdrop</span>
-            <span class="blocks-info-item-text">powered by</span>
+            <span class="blocks-info-item-title">{{'Airdrop' | translate}}</span>
+            <span class="blocks-info-item-text">{{'powered by' | translate}}</span>
             <img
               class="blocks-info-item-img"
               src="assets/images/logos/mywish-green.svg"
@@ -224,8 +215,8 @@
         </div>
         <div class="blocks-info-item">
           <div class="blocks-info-item-soon">
-            <span class="blocks-info-item-btn">Coming Soon</span>
-            <span class="blocks-info-item-coming">Liquidity pool</span>
+            <span class="blocks-info-item-btn">{{'Coming Soon' | translate}}</span>
+            <span class="blocks-info-item-coming">{{'Liquidity pool' | translate}}</span>
           </div>
         </div>
       </div>
@@ -234,30 +225,13 @@
 
   <section class="mission cl-green">
     <div class="container">
-      <h3 class="h3-block-title">Mission</h3>
+      <h3 class="h3-block-title">{{'Mission' | translate}}</h3>
       <p class="p-info-text">
-        Each of the blockchains has its own advantages and our goal is to give
-        users the opportunity to use the advantages of each of the blockchains
-        to solve the problems that they face.
+        {{'Each of the blockchains has its own advantages and our goal is to give users the opportunity to use the advantages of each of the blockchains to solve the problems that they face.' | translate}}
         <br />
         <br />
-        Our products are open source.
+        {{'Our products are open source.' | translate}}
       </p>
     </div>
   </section>
 </div>
-
-<ng-template #listingModal>
-  <div class="dialog-block dialog-block-listing">
-    <div class="dialog-block__content">
-      <button class="dialog-block__content-close" mat-dialog-close>X</button>
-      <span class="dialog-block__content-title">Listing on Uniswap</span>
-      <span class="dialog-block__content-text"
-        >on 24th of September 8 pm GMT</span
-      >
-      <a href="#" target="_blank" class="rubic-btn rubic-btn-white"
-        >Participate</a
-      >
-    </div>
-  </div>
-</ng-template>
