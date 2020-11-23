@@ -60,7 +60,7 @@ export function appInitializerFactory(translate: TranslateService, cookieService
 
   const defaultLng = (navigator.language || navigator['browserLanguage']).split('-')[0];
 
-  const langToSet = cookieService.get('lng') || ((['en', 'ko'].indexOf(defaultLng) > -1) ? defaultLng : 'en');
+  const langToSet = cookieService.get('lng') || ((['en', 'ko', 'ru', 'zh'].indexOf(defaultLng) > -1) ? defaultLng : 'en');
 
   return () => new Promise<any>((resolve: any, reject) => {
 
