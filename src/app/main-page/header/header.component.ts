@@ -26,6 +26,7 @@ export class HeaderMainPageComponent implements OnInit {
   private translator: TranslateService;
   public languagesList: { lng: string; title: string; active?: boolean }[];
   public currLanguage: string;
+  public isMobile: boolean = window.innerWidth <= 800;
 
   @ViewChild('logoutConfirmation') logoutConfirmation: TemplateRef<any>;
   @ViewChild('headerPage') headerPage;
