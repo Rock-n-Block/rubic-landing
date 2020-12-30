@@ -9,8 +9,8 @@ import {LangChangeEvent, TranslateService} from "@ngx-translate/core";
 export class MainPageComponent {
   public lng: string;
   public onePagerLinks = {
-    ko: 'https://drive.google.com/file/d/1ve7XKm7gbK3AuyniNX2TO2JCR8fuXAbe/',
-    en: 'https://drive.google.com/file/d/1Ab3DmoM02689MJoItdXlywvTvdtihp5_/view'
+    ko: '/assets/pdf/OnePage.pdf',
+    en: '/assets/pdf/OnePage.pdf'
   };
   constructor(
       private translate: TranslateService,
