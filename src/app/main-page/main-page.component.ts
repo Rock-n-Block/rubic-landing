@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {LangChangeEvent, TranslateService} from "@ngx-translate/core";
+import {LangChangeEvent, TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-main-page',
@@ -9,9 +9,12 @@ import {LangChangeEvent, TranslateService} from "@ngx-translate/core";
 export class MainPageComponent {
   public lng: string;
   public onePagerLinks = {
-    ko: '/assets/pdf/OnePage.pdf',
-    en: '/assets/pdf/OnePage.pdf'
+    en: '/assets/pdf/OnePager.pdf',
+    ko: '/assets/pdf/OnePager_ko.pdf',
+    ru: '/assets/pdf/OnePager.pdf',
+    zh: '/assets/pdf/OnePager.pdf'
   };
+  public whitePaperLink = '/assets/WhitePaper.pdf';
   constructor(
       private translate: TranslateService,
       ) {
