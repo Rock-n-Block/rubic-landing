@@ -3,6 +3,7 @@
   "version": "1.2.2",
   "scripts": {
     "start": "ng serve --proxy-config proxy.conf.json --host local.landingrubic.mywish.io --port 4224 --disableHostCheck",
+    "start-with-no-reload": "ng serve --proxy-config proxy.conf.json --host local.landingrubic.mywish.io --port 4224 --disableHostCheck --no-live-reload",
     "ng": "ng",
     "build": "ng build --prod",
     "test": "ng test",
